@@ -10,7 +10,7 @@ class Search extends Component {
 
     findID = () => {
         let artist = document.getElementById("artist")
-
+        console.log("hey")
         // axios.get('/search?q='+ artist.value + '&type=artist')
         //     .then(response => {
         //         console.log('artist', response)
