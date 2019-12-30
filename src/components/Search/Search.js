@@ -10,15 +10,18 @@ class Search extends Component {
 
     findID = () => {
         let artist = document.getElementById("artist")
-        console.log("hey")
-        // axios.get('/search?q='+ artist.value + '&type=artist')
-        //     .then(response => {
-        //         console.log('artist', response)
-        //     })
-        //     .catch(error => {
-        //         console.log(error)
-        //         this.setState({error: true})
-        //     })
+        let header = {
+            'Authorization': 'Bearer ' + this.props.access_token
+        }
+
+        axios.get('/search?q='+ artist.value + '&type=artist', {headers: header})
+            .then(response => {
+                console.log('artist', response)
+            })
+            .catch(error => {
+                console.log(error)
+                this.setState({error: true})
+            })
     }
 
     render () {

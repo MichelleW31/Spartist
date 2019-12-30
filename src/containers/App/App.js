@@ -31,7 +31,6 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <p style={{color: 'white'}}>{this.state.access_token}</p>
         <Search access_token={this.state.access_token}/>
       </div>
     );
