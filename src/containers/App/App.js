@@ -9,7 +9,8 @@ class App extends Component {
   state = {
     access_token: null,
     artist: [],
-    id: null
+    id: null,
+    step: 0
   }
 
   //GETS ACCESS TOKEN FROM CREDENTIALS
@@ -40,29 +41,41 @@ class App extends Component {
     axios.get('/search?q='+ artist.value + '&type=artist', {headers: header})
         .then(response => {
             console.log(response.data)
-            this.setState({artist: response.data.artists.items[0]})
+            this.setState({
+              artist: response.data.artists.items[0],
+              id: response.data.artists.items[0].id,
+              step: 1
+            })
         })
         .catch(error => {
             console.log(error)
             this.setState({error: true})
         })
   }
+  //end of findID
+
+  stateManager = () => {
+    const {step} = this.state
+    switch (step) {
+      case 0:
+        return <p className="default-copy">Who do you want to look up today?</p>
+      case 1:
+        return (
+          <Image artist={this.state.artist}/>
+          )
+        
+    }
+  }
 
   render() {
-    let artistView = <p className="default-copy">Who are you looking for today?</p>
-
-    if( this.state.artist.length !== 0) {
-      return (
-        <Image artist= {this.state.artist}/>
-      )
-    }
 
     return (
       <div className="App">
         <Header />
         <Search access_token={this.state.access_token} 
                 findID={this.findID}/>
-                {artistView}
+        <h2></h2>
+        {this.stateManager()}
       </div>
     );
   }

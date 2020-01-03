@@ -6,7 +6,30 @@
   text-align: center;
 }
 
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes fadein {
+  from { 
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100px;
+  }
+}
+
+/* Standard syntax */
+@keyframes fadein {
+  from { 
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100px;
+  }
+}
+
 .default-copy {
+  animation: fadein 4s;
   font-size: 22px;
   margin-top: 50px;
 }
