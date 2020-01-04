@@ -32,8 +32,7 @@ class App extends Component {
   }
 
   //FINDS ID OF ARTIST SO THAT WE CAN GET TRACKS
-  findID = () => {
-    let artist = document.getElementById("artist")
+  findID = (artist) => {
     let header = {
         'Authorization': 'Bearer ' + this.state.access_token
     }
