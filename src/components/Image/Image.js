@@ -12,7 +12,6 @@ class Image extends Component {
                 backgroundPosition: 'center center',
                 backgroundRepeat: 'no-repeat'
             }}>
-                <p>{this.props.artist.name}</p>
             </div>
         )
     }

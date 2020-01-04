@@ -1,3 +1,35 @@
 .Search {
-    padding-top: 40px;
+    padding: 40px 40px 70px;
+}
+
+.Form {
+    display: flex;
+    justify-content: space-between;
+
+    input[type=text] {
+        background: transparent;
+        border: 2px solid #fff;
+        border-radius: 18px;
+        padding: 10px 15px;
+        width: 55%;
+    }
+
+    input[type=button] {
+        background: #1ed760;
+        border: none;
+        border-radius: 18px;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: .7px;
+        text-transform: uppercase;
+        width: 30%;
+    }
+
+    input::placeholder {
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: .2px;
+    }
 }

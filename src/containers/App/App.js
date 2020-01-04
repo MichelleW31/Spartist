@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from '../../components/Header/Header.js';
 import Search from '../../components/Search/Search.js';
 import Image from '../../components/Image/Image.js';
-import './App.css';
+import './App.scss';
 import axios from 'axios'
 
 class App extends Component {
@@ -40,7 +40,7 @@ class App extends Component {
 
     axios.get('/search?q='+ artist.value + '&type=artist', {headers: header})
         .then(response => {
-            console.log(response.data)
+            console.log(response.data.artists.items[0])
             this.setState({
               artist: response.data.artists.items[0],
               id: response.data.artists.items[0].id,
@@ -74,7 +74,7 @@ class App extends Component {
         <Header />
         <Search access_token={this.state.access_token} 
                 findID={this.findID}/>
-        <h2></h2>
+        {this.state.artist.length != 0 ? <h2 className="name">{this.state.artist.name } - <span className="genre">{this.state.artist.genres[0]}</span></h2> : null}
         {this.stateManager()}
       </div>
     );

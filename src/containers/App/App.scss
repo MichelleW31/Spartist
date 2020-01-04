@@ -31,6 +31,24 @@
 .default-copy {
   animation: fadein 4s;
   font-size: 22px;
-  margin-top: 50px;
 }
 
+.display {
+  display: block;
+}
+
+.no-display {
+  display: none;
+}
+
+.name {
+  color: #1ed760;
+  font-weight: 400;
+  padding: 0 0 20px 40px;
+  text-align: left;
+}
+
+.genre {
+  font-weight: 300;
+  text-transform: capitalize;
+}
