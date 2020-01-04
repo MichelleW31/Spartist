@@ -1,8 +1,10 @@
+@import '../../_variables.scss';
+
 .App {
-  background: #0f0f0f;
+  background: $background;
   color: white;
   height: 1000px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $mont;
   text-align: center;
 }
 
@@ -42,7 +44,7 @@
 }
 
 .name {
-  color: #1ed760;
+  color: $green;
   font-weight: 400;
   padding: 0 0 20px 40px;
   text-align: left;

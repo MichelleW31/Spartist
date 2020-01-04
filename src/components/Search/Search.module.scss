@@ -1,3 +1,5 @@
+@import '../../_variables.scss';
+
 .Search {
     padding: 40px 40px 70px;
 }
@@ -8,28 +10,36 @@
 
     input[type=text] {
         background: transparent;
-        border: 2px solid #fff;
+        border: 2px solid $white;
         border-radius: 18px;
+        caret-color: $white;
+        color: $white;
+        font-family: $mont;
+        letter-spacing: .9px;
         padding: 10px 15px;
         width: 55%;
     }
 
     input[type=button] {
-        background: #1ed760;
+        background: $green;
         border: none;
         border-radius: 18px;
-        color: #fff;
-        font-family: 'Montserrat', sans-serif;
+        color: $white;
+        font-family: $mont;
         font-size: 13px;
         font-weight: 700;
         letter-spacing: .7px;
         text-transform: uppercase;
         width: 30%;
+
+        :hover {
+            cursor: pointer;
+        }
     }
 
     input::placeholder {
-        color: #fff;
-        font-family: 'Montserrat', sans-serif;
+        color: $white;
+        font-family: $mont;
         letter-spacing: .2px;
     }
 }
