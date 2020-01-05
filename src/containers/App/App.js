@@ -61,6 +61,7 @@ class App extends Component {
       case 1:
         return (
           <Image artist={this.state.artist}/>
+          //remove state manager. handle it in the render
           )
         
     }
