@@ -62,7 +62,7 @@ class App extends Component {
         return (
           <div>
             <Image artist={this.state.artist}/>
-            <Albums artist={this.state.artist} />
+            <Albums artist={this.state.artist} access_token={this.state.access_token}/>
           </div>
           )
     }
