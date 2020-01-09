@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../../components/Header/Header.js';
 import Search from '../../components/Search/Search.js';
 import Image from '../../components/Image/Image.js';
+import Albums from '../../components/Albums/Albums.js';
 import './App.scss';
 import axios from 'axios'
 
@@ -59,8 +60,10 @@ class App extends Component {
         return <p className="default-copy">Who do you want to look up today?</p>
       case 1:
         return (
-          <Image artist={this.state.artist}/>
-
+          <div>
+            <Image artist={this.state.artist}/>
+            <Albums artist={this.state.artist} />
+          </div>
           )
     }
   }
