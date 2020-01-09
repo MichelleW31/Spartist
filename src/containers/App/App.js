@@ -39,7 +39,6 @@ class App extends Component {
 
     axios.get('/search?q='+ artist.value + '&type=artist', {headers: header})
         .then(response => {
-            console.log(response.data.artists.items[0])
             this.setState({
               artist: response.data.artists.items[0],
               id: response.data.artists.items[0].id,
@@ -61,9 +60,8 @@ class App extends Component {
       case 1:
         return (
           <Image artist={this.state.artist}/>
-          //remove state manager. handle it in the render
+
           )
-        
     }
   }
 

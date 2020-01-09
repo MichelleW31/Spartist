@@ -6,4 +6,7 @@
     height: 400px;
     margin-left: 40px;
     width: 400px;
+    -webkit-box-shadow: 2px 3px 10px 0px rgba(64, 64, 64, 0.75);
+    -moz-box-shadow: 2px 3px 10px 0px rgba(64, 64, 64, 0.75);
+    box-shadow: 2px 3px 10px 0px rgba(64, 64, 64, 0.75);
 }
