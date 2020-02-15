@@ -26,22 +26,17 @@ class Albums extends Component {
   }
 
   render() {
-    let albumsArray = [...this.state.albums];
-
     let array = [];
 
-    for (let i = 0; i < albumsArray.length; i++) {
+    this.state.albums.map(album => {
       if (array.length === 0) {
-        array.push(albumsArray[i]);
-        console.log(array);
+        array.push(album);
       } else {
-        let found = array.some(el => el.name === albumsArray[i].name);
-        if (!found) {
-          array.push(albumsArray[i]);
-          console.log(array);
+        if (!array.some(el => el.name === album.name)) {
+          array.push(album);
         }
       }
-    }
+    });
 
     let albums = array.map(album => {
       return <Album key={album.id} album={album} />;
