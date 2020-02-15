@@ -1,12 +1,16 @@
-@import '../../_variables.scss';
+@import "../../_variables.scss";
+
+.Image_wrapper {
+  color: $black;
+  height: auto;
+  margin: 0 auto 50px;
+  width: 83%;
+  -webkit-box-shadow: 2px 3px 10px 0px rgba(64, 64, 64, 0.75);
+  -moz-box-shadow: 2px 3px 10px 0px rgba(64, 64, 64, 0.75);
+  box-shadow: 2px 3px 10px 0px rgba(64, 64, 64, 0.75);
+}
 
 .Image {
-    border-radius: 5px;
-    color: $black;
-    height: 400px;
-    margin:0 0 50px 40px;
-    width: 400px;
-    -webkit-box-shadow: 2px 3px 10px 0px rgba(64, 64, 64, 0.75);
-    -moz-box-shadow: 2px 3px 10px 0px rgba(64, 64, 64, 0.75);
-    box-shadow: 2px 3px 10px 0px rgba(64, 64, 64, 0.75);
+  border-radius: 5px;
+  width: 100%;
 }

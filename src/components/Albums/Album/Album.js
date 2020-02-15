@@ -1,19 +1,32 @@
-import React, { Component } from 'react'
-import styles from './Album.module.scss';
+import React, { Component } from "react";
+import styles from "./Album.module.scss";
 
 class Album extends Component {
-    state = {
+  state = {};
 
-    }
-
-    render () {
-
-        return (
-            <div className={styles.Album}>
-                <h1>this is an album</h1>
-            </div>
-        )
-    }
+  render() {
+    const { name, release_date, images, url } = this.props.album;
+    return (
+      <div className={styles.Album}>
+        <div
+          className={styles.Image}
+          style={{
+            backgroundImage: "url(" + images[0].url + ")",
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat"
+          }}
+        ></div>
+        <h4 className={styles.Name}>{name}</h4>
+        <div className={styles.Copy}>
+          <h5>Release date: {release_date}</h5>
+          <a href={url} className={styles.Link}>
+            Open in Spotify
+          </a>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default Album
+export default Album;

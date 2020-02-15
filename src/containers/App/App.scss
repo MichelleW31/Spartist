@@ -1,16 +1,16 @@
-@import '../../_variables.scss';
+@import "../../_variables.scss";
 
 .App {
   background: $background;
   color: white;
-  height: 1000px;
+  min-height: 1000px;
   font-family: $mont;
   text-align: center;
 }
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes fadein {
-  from { 
+  from {
     opacity: 0%;
   }
 
@@ -21,7 +21,7 @@
 
 /* Standard syntax */
 @keyframes fadein {
-  from { 
+  from {
     opacity: 0%;
   }
 
@@ -32,7 +32,7 @@
 
 .default-copy {
   animation: fadein 4s;
-  font-size: 22px;
+  font-size: 1.8rem;
   margin-top: 70px;
 }
 

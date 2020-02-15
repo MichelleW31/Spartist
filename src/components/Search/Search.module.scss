@@ -1,52 +1,53 @@
-@import '../../_variables.scss';
+@import "../../_variables.scss";
 
 .Search {
-    padding: 40px 40px 30px;
+  padding: 40px 40px 30px;
 }
 
 .Form {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    input[type=text] {
-        background: transparent;
-        border: 2px solid $white;
-        border-radius: 18px;
-        caret-color: $white;
-        color: $white;
-        font-family: $mont;
-        letter-spacing: .9px;
-        padding: 10px 15px;
-        width: 55%;
-    }
+  input[type="text"] {
+    background: transparent;
+    border: 2px solid $white;
+    border-radius: 18px;
+    caret-color: $white;
+    color: $white;
+    font-family: $mont;
+    letter-spacing: 0.9px;
+    padding: 10px 15px;
+    width: 55%;
+  }
 
-    input[type=button] {
-        background: $green;
-        border: none;
-        border-radius: 18px;
-        color: $white;
-        font-family: $mont;
-        font-size: 13px;
-        font-weight: 700;
-        letter-spacing: .7px;
-        text-transform: uppercase;
-        width: 30%;
-    }
+  input[type="button"] {
+    background: $green;
+    border: none;
+    border-radius: 18px;
+    color: $white;
+    font-family: $mont;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    min-width: 110px;
+    text-transform: uppercase;
+    width: 30%;
+  }
 
-    input[type=button]:hover {
-        cursor: pointer;
-    }
+  input[type="button"]:hover {
+    cursor: pointer;
+  }
 
-    input::placeholder {
-        color: $white;
-        font-family: $mont;
-        letter-spacing: .2px;
-    }
+  input::placeholder {
+    color: $white;
+    font-family: $mont;
+    letter-spacing: 0.2px;
+  }
 }
 
 .Error {
-    color: $error;
-    font-size: 1rem;
-    padding-top: 10px;
-    text-align: left;
+  color: $error;
+  font-size: 1rem;
+  padding-top: 10px;
+  text-align: left;
 }

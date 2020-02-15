@@ -1,1 +1,15 @@
 @import '../../_variables.scss';
+
+.Albums_Wrapper {
+    padding: 0 40px;
+
+    h2 {
+        text-align: left;
+    }
+}
+
+.Albums {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}
