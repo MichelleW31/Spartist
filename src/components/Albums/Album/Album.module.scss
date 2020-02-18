@@ -9,21 +9,25 @@
 }
 
 .Name {
-  font-size: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 300px;
 }
 
 .Image {
   border-radius: 4px;
   height: 100px;
+  margin-bottom: 5px;
   width: 100px;
 }
 
-.Copy {
-  display: flex;
-  justify-content: space-between;
-}
+// .Copy {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   margin-top: 7px;
+// }
 
-.Link {
-  color: $green;
-  text-decoration: none;
-}
+// .Link {
+//   color: $green;
+//   text-decoration: none;
+// }

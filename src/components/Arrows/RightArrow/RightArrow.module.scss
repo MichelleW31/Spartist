@@ -1,0 +1,18 @@
+.RightArrow {
+}
+
+.fa_angle_right {
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: "Font Awesome 5 Pro";
+  font-size: 2rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.fa_angle_right:before {
+  content: "\f105";
+}

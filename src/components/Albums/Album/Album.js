@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styles from "./Album.module.scss";
 
+
 class Album extends Component {
   state = {};
 
@@ -18,12 +19,11 @@ class Album extends Component {
           }}
         ></div>
         <h4 className={styles.Name}>{name}</h4>
-        <div className={styles.Copy}>
-          <h5>Release date: {release_date}</h5>
+        {/* <div className={styles.Copy}>
           <a href={url} className={styles.Link}>
             Open in Spotify
           </a>
-        </div>
+        </div> */}
       </div>
     );
   }
