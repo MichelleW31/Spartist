@@ -11,6 +11,7 @@ class Albums extends Component {
   };
   componentDidUpdate() {
     $(".Albums").slick({
+      arrows: true,
       dots: true,
       infinite: false,
       speed: 300,
