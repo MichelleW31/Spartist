@@ -89,8 +89,6 @@ class Albums extends Component {
     return (
       <div className={styles.Albums_Wrapper}>
         <h2>Albums</h2>
-        {/* <LeftArrow />
-        <RightArrow /> */}
         <div className="Albums">
           {this.state.albums.length != 0 ? albums : null}
         </div>
