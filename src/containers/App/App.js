@@ -42,7 +42,6 @@ const App = () => {
       .get("/search?q=" + artist.value + "&type=artist", { headers: header })
       .then((response) => {
         setArtist(response.data.artists.items[0]);
-        setId(response.data.artists.items[0].id);
         setStep(1);
       })
       .catch((error) => {

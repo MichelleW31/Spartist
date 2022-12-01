@@ -15,7 +15,6 @@ const Albums = (props) => {
     axios
       .get("/artists/" + props.artist.id + "/albums", { headers: header })
       .then((response) => {
-        console.log("response", response.data.items);
         setAlbums(response.data.items);
       })
       .catch((error) => {
