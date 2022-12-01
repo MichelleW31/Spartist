@@ -63,6 +63,10 @@ const App = () => {
             <Albums artist={artist} access_token={access_token} />
           </div>
         );
+      default:
+        return (
+          <p className="default-copy">Who do you want to look up today?</p>
+        );
     }
   };
 
@@ -70,7 +74,7 @@ const App = () => {
     <div className="App">
       <Header />
       <Search access_token={access_token} findID={findID} />
-      {artist.length != 0 ? (
+      {artist.length !== 0 ? (
         <h2 className="name">
           {artist.name} - <span className="genre">{artist.genres[0]}</span>
         </h2>

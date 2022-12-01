@@ -20,7 +20,7 @@ const Albums = (props) => {
       .catch((error) => {
         console.log(error);
       });
-  }, [props.artist.id]);
+  }, [props.artist.id, props.access_token]);
 
   const settings = {
     arrows: true,
@@ -33,7 +33,7 @@ const Albums = (props) => {
 
   let array = [];
 
-  albums.map((album) => {
+  albums.forEach((album) => {
     if (array.length === 0) {
       array.push(album);
     } else {
@@ -54,7 +54,7 @@ const Albums = (props) => {
     <div className={styles.Albums_Wrapper}>
       <h2>Albums</h2>
       <div className="Albums">
-        <Slider {...settings}>{albums.length != 0 ? albumList : null}</Slider>
+        <Slider {...settings}>{albums.length !== 0 ? albumList : null}</Slider>
       </div>
     </div>
   );
