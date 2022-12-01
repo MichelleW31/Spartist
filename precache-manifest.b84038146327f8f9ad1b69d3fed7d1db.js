@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1f67a859159bf4a7be4f888f0f715e86",
+    "revision": "58cc645603610d625b10ffd4f96ab7bc",
     "url": "/Spartist/index.html"
   },
   {
