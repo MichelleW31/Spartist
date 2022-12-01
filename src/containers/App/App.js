@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/Header/Header.js";
 import Search from "../../components/Search/Search.js";
 import Image from "../../components/Image/Image.js";
@@ -6,16 +6,13 @@ import Albums from "../../components/Albums/Albums.js";
 import "./App.scss";
 import axios from "axios";
 
-class App extends Component {
-  state = {
-    access_token: null,
-    artist: [],
-    id: null,
-    step: 0,
-  };
+const App = () => {
+  const [access_token, setAccessToken] = useState(null);
+  const [artist, setArtist] = useState([]);
+  const [step, setStep] = useState(0);
 
   //GETS ACCESS TOKEN FROM CREDENTIALS
-  componentDidMount() {
+  useEffect(() => {
     let param =
       "grant_type=client_credentials&client_id=2f473a1d096845c691c2d5217a94a347&client_secret=c524c7aa622e4e65b3cf5f690477bd3a";
 
@@ -28,37 +25,33 @@ class App extends Component {
         headers: header,
       })
       .then((response) => {
-        this.setState({ access_token: response.data.access_token });
+        setAccessToken(response.data.access_token);
       })
       .catch((error) => {
         console.log(error);
       });
-  }
+  }, []);
 
   //FINDS ID OF ARTIST SO THAT WE CAN GET TRACKS
-  findID = (artist) => {
+  const findID = (artist) => {
     let header = {
-      Authorization: "Bearer " + this.state.access_token,
+      Authorization: "Bearer " + access_token,
     };
 
     axios
       .get("/search?q=" + artist.value + "&type=artist", { headers: header })
       .then((response) => {
-        this.setState({
-          artist: response.data.artists.items[0],
-          id: response.data.artists.items[0].id,
-          step: 1,
-        });
+        setArtist(response.data.artists.items[0]);
+        setId(response.data.artists.items[0].id);
+        setStep(1);
       })
       .catch((error) => {
         console.log(error);
-        this.setState({ error: true });
       });
   };
   //end of findID
 
-  stateManager = () => {
-    const { step } = this.state;
+  const stateManager = () => {
     switch (step) {
       case 0:
         return (
@@ -67,31 +60,25 @@ class App extends Component {
       case 1:
         return (
           <div className="image-and-albums">
-            <Image artist={this.state.artist} />
-            <Albums
-              artist={this.state.artist}
-              access_token={this.state.access_token}
-            />
+            <Image artist={artist} />
+            <Albums artist={artist} access_token={access_token} />
           </div>
         );
     }
   };
 
-  render() {
-    return (
-      <div className="App">
-        <Header />
-        <Search access_token={this.state.access_token} findID={this.findID} />
-        {this.state.artist.length != 0 ? (
-          <h2 className="name">
-            {this.state.artist.name} -{" "}
-            <span className="genre">{this.state.artist.genres[0]}</span>
-          </h2>
-        ) : null}
-        {this.stateManager()}
-      </div>
-    );
-  }
-}
+  return (
+    <div className="App">
+      <Header />
+      <Search access_token={access_token} findID={findID} />
+      {artist.length != 0 ? (
+        <h2 className="name">
+          {artist.name} - <span className="genre">{artist.genres[0]}</span>
+        </h2>
+      ) : null}
+      {stateManager()}
+    </div>
+  );
+};
 
 export default App;
