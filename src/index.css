@@ -12,3 +12,7 @@ body {
 html{
   font-size: 2.5vw;
 }
+
+html, body, #root {
+  height: 100%;
+}

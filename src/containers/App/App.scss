@@ -3,7 +3,8 @@
 .App {
   background: $background;
   color: white;
-  min-height: 1000px;
+  height: 100%;
+  min-height: 100%;
   font-family: $mont;
   text-align: center;
 }
@@ -34,6 +35,10 @@
   animation: fadein 4s;
   font-size: 1.8rem;
   margin-top: 70px;
+}
+
+.image-and-albums {
+  background: $background;
 }
 
 .display {
