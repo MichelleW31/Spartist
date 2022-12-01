@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6d1b8eea649c16f6890eb0ad542ac761",
+    "revision": "1f67a859159bf4a7be4f888f0f715e86",
     "url": "/Spartist/index.html"
   },
   {
-    "revision": "0b759c8062fa2dda16a7",
+    "revision": "4324259aca10d4c5314b",
     "url": "/Spartist/static/css/main.1567366e.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Spartist/static/js/2.af6bd6bf.chunk.js.LICENSE"
   },
   {
-    "revision": "0b759c8062fa2dda16a7",
-    "url": "/Spartist/static/js/main.4eea9040.chunk.js"
+    "revision": "4324259aca10d4c5314b",
+    "url": "/Spartist/static/js/main.726204b9.chunk.js"
   },
   {
     "revision": "ed6d28d40022544ca8aa",
