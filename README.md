@@ -20,7 +20,7 @@ HTTPS
 git clone https://github.com/MichelleW31/Spartist.git
 ```
 
-Use the package manager npm to install BGM BANK.
+Use the package manager npm to install Spartist.
 
 ```bash
 npm install
